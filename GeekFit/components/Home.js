@@ -3,7 +3,7 @@ import { StyleSheet, Text, View, Button, FlatList } from 'react-native';
 import {Card, FAB} from 'react-native-paper'
 
 
-function Home() {
+function Home(props) {
 
     const [data, setData]=useState([])
     useEffect(() => {
@@ -50,7 +50,7 @@ function Home() {
           small={false}
           icon="plus"
           theme={{colors:{accent:"green"}}}
-          onPress = {()=> console.log("yes")}
+          onPress = {()=> props.navigation.navigate('Create')}
           />
       </View>
 

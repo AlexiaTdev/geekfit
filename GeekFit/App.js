@@ -6,17 +6,29 @@ import Create from './components/Create';
 import ClassHome from './components/ClassHome';
 import Contants from 'expo-constants';
 import { createStackNavigator } from '@react-navigation/stack';
+import { NavigationContainer } from '@react-navigation/native';
 
-export default function App() {
+const Stack = createStackNavigator()
+
+function App() {
   
   return (
     <View style={styles.container}>
-      <Create/>
-      
+      <Stack.Navigator>
+        <Stack.Screen name="Home" component={Home}/>
+        <Stack.Screen name="Create" component={Create}/>
+      </Stack.Navigator>
     </View>
   );
 }
-//<ClassHome name = "alexia"/>
+
+export default() => {
+  return(
+    <NavigationContainer>
+      <App/>
+    </NavigationContainer>
+  )
+}
 
 const styles = StyleSheet.create({
   container: {
