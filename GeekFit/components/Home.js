@@ -1,14 +1,31 @@
-import React, {useState} from 'react'
+import React, {useState, useEffect} from 'react'
 import { StyleSheet, Text, View, Button, FlatList } from 'react-native';
 import {Card, FAB} from 'react-native-paper'
 
 
 function Home() {
-   const data = [
+
+    const [data, setData]=useState([])
+    useEffect(() => {
+        fetch('http://192.168.2.209:5000/get', {
+            method:'GET'
+        })
+        .then(resp => resp.json())
+        .then(article => {
+            setData(article)
+        })
+        
+    }, [])
+
+
+   /**
+    * 
+    * const data = [
        {id:1, title:'First Title', body:'First Body'},
        {id:2, title:'Second Title', body:'Second Body'},
        {id:3, title:'Third Title', body:'Third Body'}
    ]
+    */
 
    const renderData = (item) => {
        return (
