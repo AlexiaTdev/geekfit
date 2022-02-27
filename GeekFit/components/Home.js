@@ -45,7 +45,7 @@ function Home() {
 const styles = StyleSheet.create({
     cardStyle: {
         padding:10,
-        margin:10
+        margin:12
     },
 
     fab: {
