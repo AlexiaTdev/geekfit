@@ -26,21 +26,14 @@ function Home(props) {
         loadData()
     }, [])
 
-
-   /**
-    * 
-    * const data = [
-       {id:1, title:'First Title', body:'First Body'},
-       {id:2, title:'Second Title', body:'Second Body'},
-       {id:3, title:'Third Title', body:'Third Body'}
-   ]
-    */
+    const clickedItem = (data) => {
+        props.navigation.navigate('Details', {data:data})
+    }
 
    const renderData = (item) => {
        return (
            <Card style = {styles.cardStyle}>
-               <Text style = {{fontSize:20}}>{item.title}</Text>
-               <Text>{item.body}</Text>
+               <Text style = {{fontSize:23}} onPress={()=> clickedItem(item)}>{item.title}</Text>
            </Card>
 
        )
