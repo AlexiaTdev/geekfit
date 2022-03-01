@@ -2,7 +2,6 @@ import React from 'react'
 import {View, StyleSheet, Text} from 'react-native';
 import { TextInput, Button } from 'react-native-paper';
 import { Icon } from 'react-native-elements';
-import OtherConnexion from './OtherConnexion';
 
 function InputId() {
   return (
@@ -37,9 +36,34 @@ function InputId() {
             <Text style={styles.TextOptionStyle} onPress={()=> console.log('forgotten mdp pressed')}>Mot de passe oublié</Text>
             <Text style={styles.TextOptionStyle} onPress={()=> console.log('subscribe pressed')}>S'inscrire</Text>
         </View>
-
-        <OtherConnexion/>
-        
+        <View style={styles.OtherViewOptionStyle}>
+            <View style={styles.TextConnexionViewOptionStyle}>
+                <Icon 
+                    name='google'
+                    type='fontisto'
+                    color='white'
+                    style={styles.iconStyle}/>
+                <Text style={styles.TextConnexionOptionStyle} onPress={()=> console.log('GoogleBTN pressed')}>Connexion avec Google</Text>
+            </View>
+            <View style={styles.TextConnexionViewOptionStyle}>
+                <Icon 
+                    name='facebook'
+                    type='fontisto'
+                    color='white'
+                    style={styles.iconStyle}/>
+                <Text style={styles.TextConnexionOptionStyle} onPress={()=> console.log('FbkBTN pressed')}>Connexion avec Facebook</Text>
+            </View>
+            <View style={styles.TextConnexionViewOptionStyle}>
+                <Icon 
+                    name='discord'
+                    type='fontisto'
+                    color='white'
+                    style={styles.iconStyle}/>
+                <Text style={styles.TextConnexionOptionStyle} onPress={()=> console.log('DiscordBTN pressed')}>Connexion avec Discord</Text>
+                
+            </View>
+            
+        </View>
         <View style={styles.BtnConnexionViewOptionStyle}>
             <Button
                 onPress={()=> console.log('se connecter button pressed')}

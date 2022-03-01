@@ -12,10 +12,9 @@ function Connexion() {
 
    }
   return (
-      <View style = {{flex:1}}>
+      <View style = {{flex:1, backgroundColor:'#0E0E0E'}}>
           <Homeheader/>
-          <InputId/>
-          
+          <InputId/>          
       </View>
 
 
