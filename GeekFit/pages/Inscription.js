@@ -1,14 +1,14 @@
 import React, {useState} from 'react'
 import {View, StyleSheet, Text} from 'react-native';
 import Homeheader from '../components/Homeheader';
-import InputId from '../components/InputId';
+import InputId_Inscription from '../components/InputId_Inscription';
 
-function Inscription(props) {
+function Inscription({navigation}) {
     const [activity, setActivity]=useState(true)
   return (
     <View style = {{flex:1, backgroundColor:'#0E0E0E'}}>
         <Homeheader/>
-        <Text style={{backgroundColor:'red'}}>essai</Text>          
+        <InputId_Inscription navigation={navigation}/>          
     </View>
   )
 }

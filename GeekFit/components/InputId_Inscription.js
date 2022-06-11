@@ -2,14 +2,28 @@ import React from 'react'
 import {View, StyleSheet, Text} from 'react-native';
 import { TextInput, Button } from 'react-native-paper';
 import { Icon } from 'react-native-elements';
+import OtherConnexion from './OtherConnexion';
 
-function InputId() {
+function InputId_Inscription({ navigation }) {
+
   return (
     <View style={styles.InputIdStyle}>
         <View >
             <TextInput
             style={styles.TextInputStyle}
             label="username"
+            left={<TextInput.Icon name="account" color='white'/>}
+            theme={{
+                colors: {
+                           placeholder: 'white', text: 'white', primary: 'white',
+                           underlineColor: 'white', background: '#313131',
+                           iconStyle:'white'
+                   }
+             }}
+            />
+            <TextInput
+            style={styles.TextInputStyle}
+            label="email"
             left={<TextInput.Icon name="account" color='white'/>}
             theme={{
                 colors: {
@@ -33,44 +47,18 @@ function InputId() {
             />
         </View>
         <View style={styles.TextViewOptionStyle}>
-            <Text style={styles.TextOptionStyle} onPress={()=> console.log('forgotten mdp pressed')}>Mot de passe oublié</Text>
-            <Text style={styles.TextOptionStyle} onPress={()=> console.log('subscribe pressed')}>S'inscrire</Text>
+            <Text style={styles.TextOptionStyle} onPress={() => navigation.navigate('Connexion')}>Se connecter</Text>
         </View>
-        <View style={styles.OtherViewOptionStyle}>
-            <View style={styles.TextConnexionViewOptionStyle}>
-                <Icon 
-                    name='google'
-                    type='fontisto'
-                    color='white'
-                    style={styles.iconStyle}/>
-                <Text style={styles.TextConnexionOptionStyle} onPress={()=> console.log('GoogleBTN pressed')}>Connexion avec Google</Text>
-            </View>
-            <View style={styles.TextConnexionViewOptionStyle}>
-                <Icon 
-                    name='facebook'
-                    type='fontisto'
-                    color='white'
-                    style={styles.iconStyle}/>
-                <Text style={styles.TextConnexionOptionStyle} onPress={()=> console.log('FbkBTN pressed')}>Connexion avec Facebook</Text>
-            </View>
-            <View style={styles.TextConnexionViewOptionStyle}>
-                <Icon 
-                    name='discord'
-                    type='fontisto'
-                    color='white'
-                    style={styles.iconStyle}/>
-                <Text style={styles.TextConnexionOptionStyle} onPress={()=> console.log('DiscordBTN pressed')}>Connexion avec Discord</Text>
-                
-            </View>
-            
-        </View>
+
+        <OtherConnexion/>
+        
         <View style={styles.BtnConnexionViewOptionStyle}>
             <Button
-                onPress={()=> console.log('se connecter button pressed')}
+                onPress={()=> console.log('s inscrire button pressed')}
                 style={styles.ButtonOptionStyle}
                 labelStyle={{fontSize:20}}
                 theme={{colors: {primary: 'white'}}}
-            >Se Connecter</Button>
+            >S'inscrire</Button>
         </View>
 
         
@@ -80,14 +68,12 @@ function InputId() {
 
 const styles = StyleSheet.create({
     InputIdStyle : {
-        margin: 10,
+
         flex: 1
     },
     TextInputStyle : {
         marginBottom:10,
-        maxHeight:54,
-
-        
+        maxHeight:50
     },
     TextViewOptionStyle : {
         flexDirection: 'row',
@@ -96,7 +82,8 @@ const styles = StyleSheet.create({
     TextOptionStyle: {
         textDecorationLine: 'underline',
         color:'white',
-        overlayColor:'#0E0E0E',
+        marginLeft: 250,
+        //overlayColor:'#0E0E0E',
     },
     OtherViewOptionStyle:{
         marginTop: 25,
@@ -130,4 +117,4 @@ const styles = StyleSheet.create({
 
 })
 
-export default InputId
+export default InputId_Inscription
