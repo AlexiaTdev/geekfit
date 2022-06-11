@@ -8,7 +8,7 @@ function Inscription({navigation}) {
   return (
     <View style = {{flex:1, backgroundColor:'#0E0E0E'}}>
         <Homeheader/>
-        <InputId_Inscription navigation={navigation}/>          
+        <InputId_Inscription navigation={navigation}/>  
     </View>
   )
 }
