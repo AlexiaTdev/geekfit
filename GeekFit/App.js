@@ -16,7 +16,6 @@ function App() {
       <Stack.Navigator>
         <Stack.Screen name="Connexion" component={Connexion} options={{ headerShown: false }}/>
         <Stack.Screen name="Inscription" component={Inscription} options={{ headerShown: false }}/>
-
       </Stack.Navigator>
     </View>
   );

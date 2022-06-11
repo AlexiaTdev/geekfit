@@ -8,8 +8,7 @@ function Inscription(props) {
   return (
     <View style = {{flex:1, backgroundColor:'#0E0E0E'}}>
         <Homeheader/>
-        <InputId/>
-        <Text>essai</Text>        
+        <Text style={{backgroundColor:'red'}}>essai</Text>          
     </View>
   )
 }

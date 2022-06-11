@@ -4,7 +4,7 @@ import { TextInput, Button } from 'react-native-paper';
 import { Icon } from 'react-native-elements';
 import OtherConnexion from './OtherConnexion';
 
-function InputId(props) {
+function InputId({ navigation }) {
 
   return (
     <View style={styles.InputIdStyle}>
@@ -35,8 +35,8 @@ function InputId(props) {
             />
         </View>
         <View style={styles.TextViewOptionStyle}>
-            <Text style={styles.TextOptionStyle} onPress={()=> console.log('forgotten mdp pressed')}>Mot de passe oublié</Text>
-            <Text style={styles.TextOptionStyle} onPress={()=> props.navigation.navigate('Inscription')}>S'inscrire</Text>
+            <Text style={styles.TextOptionStyle} onPress={() => console.log('forgotten mdp pressed')}>Mot de passe oublié</Text>
+            <Text style={styles.TextOptionStyle} onPress={() => navigation.navigate('Inscription')}>S'inscrire</Text>
         </View>
 
         <OtherConnexion/>
