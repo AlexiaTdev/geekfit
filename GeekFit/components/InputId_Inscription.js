@@ -54,7 +54,7 @@ function InputId_Inscription({ navigation }) {
         
         <View style={styles.BtnConnexionViewOptionStyle}>
             <Button
-                onPress={()=> console.log('s inscrire button pressed')}
+                onPress={() => navigation.navigate('Explications')}
                 style={styles.ButtonOptionStyle}
                 labelStyle={{fontSize:20}}
                 theme={{colors: {primary: 'white'}}}
