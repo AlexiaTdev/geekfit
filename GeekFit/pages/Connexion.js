@@ -6,7 +6,7 @@ import InputId from '../components/InputId';
 
 
 
-function Connexion() {
+function Connexion(props) {
 
    const renderData = (item) => {
 
@@ -14,7 +14,7 @@ function Connexion() {
   return (
       <View style = {{flex:1, backgroundColor:'#0E0E0E'}}>
           <Homeheader/>
-          <InputId/>          
+          <InputId />          
       </View>
 
 
