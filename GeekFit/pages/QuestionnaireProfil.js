@@ -8,7 +8,10 @@ export default function QuestionnaireProfil({navigation}) {
 
   return (
     <View style = {styles.globalProfilStyle}>
-        <Image source={require('../src/logoGeekFit3.png')}/>
+        <View style = {styles.headerProfilStyle}>
+            <Image  source={require('../src/logoGeekFit3.png')}/>
+        </View>
+        
         <Text style={styles.titleStyle}>PROFIL</Text>
         <InputProfil navigation={navigation}/>
         <QuestionnaireNav/>
@@ -19,12 +22,14 @@ export default function QuestionnaireProfil({navigation}) {
 const styles = StyleSheet.create({
     titleStyle: {
         color: "white",
-        marginTop: 20,
         fontSize:30
     },
     globalProfilStyle:{
         flex:1,
         backgroundColor:'#0E0E0E',
         justifyContent:"space-evenly"
+    },
+    headerProfilStyle: {
+        alignItems: 'center'
     }
 })

@@ -124,7 +124,7 @@ const styles = StyleSheet.create({
         color:"white"
     },
     modaleStyle:{
-
+        justifyContent: 'space-evenly',
     },
     switchStyle:{
         flexDirection: 'row',
