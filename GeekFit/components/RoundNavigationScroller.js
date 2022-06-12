@@ -52,7 +52,7 @@ export default function RoundNavigationScroller(props) {
                         style={isOnDisplay(3) ? styles.roundBtnStyleActive : styles.roundBtnStyle}
                         onPress={()=>{props.setData(3)}}
                         />
-                    <Icon name={'arrow-right'} color='#FD8403' style={{}} size={60} onPress={() => props.navigation.navigate('Connexion')}/>
+                    <Icon name={'arrow-right'} color='#FD8403' style={{}} size={60} onPress={() => props.navigation.navigate('QuestionnaireProfil')}/>
                 </View>
                 
             )

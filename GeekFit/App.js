@@ -4,6 +4,7 @@ import { StyleSheet, Text, View } from 'react-native';
 import Connexion from './pages/Connexion';
 import Inscription from './pages/Inscription';
 import Explications from './pages/Explications';
+import QuestionnaireProfil from './pages/QuestionnaireProfil';
 import Contants from 'expo-constants';
 import { createStackNavigator } from '@react-navigation/stack';
 import { NavigationContainer } from '@react-navigation/native';
@@ -19,6 +20,8 @@ function App() {
         <Stack.Screen name="Connexion" component={Connexion} options={{ headerShown: false }}/>
         <Stack.Screen name="Inscription" component={Inscription} options={{ headerShown: false }}/>
         <Stack.Screen name="Explications" component={Explications} options={{ headerShown: false }}/>
+        <Stack.Screen name="QuestionnaireProfil" component={QuestionnaireProfil} options={{ headerShown: false }}/>
+        
       </Stack.Navigator>
     </View>
   );
