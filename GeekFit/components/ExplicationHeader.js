@@ -30,12 +30,12 @@ export default function ExplicationHeader(props) {
 }
 const styles = StyleSheet.create({
     homeImgStyle: {
-        width: 300,
-        height: 300
+        width: 260,
+        height: 260
     },
     homeheaderStyle : {
         flexDirection: 'row',
         justifyContent: 'center',
-        alignItems: 'center'
+        alignItems: 'center',
     }
 })
